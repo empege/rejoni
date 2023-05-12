@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pronađi rejon</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="districts">
+    <div class="districts__logo-wrapper">
+      <img class="districts__logo" src="/assets/posta-logo.png" alt="logo">
+    </div>
+    <div class="districts__content-wrapper">
+      <label for="search" class="districts__search">
+        <input class="districts__search-input" type="text" id="search">
+        <span class="districts__search-description">Ukucajte ime ulice kako biste videli kom rejonu pripada</span>
+      </label>
+      <div class="districts__results">
+        <div class="districts__heading">
+          <span class="districts__heading-item districts__heading-item--street">Ulica</span>
+          <span class="districts__heading-item districts__heading-item--district-number">Rejon</span>
+        </div>
+        <div class="results__content"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

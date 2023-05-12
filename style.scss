@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@mixin tablet {
+  @media (max-width: 768px) { @content; }
+}
+
+$c-white: whitesmoke;
+$c-gray: #233545;
+$c-yellow: #fec134;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $c-white;
+  font-family: 'Roboto', sans-serif;
+  background-color: $c-gray;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.districts {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+
+  &__logo-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 15px;
+    width: 150px;
+
+    @include tablet {
+      bottom: auto;
+      top: 0px;
+      right: 10px;
+      width: 80px;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    max-width: 100%;
+    padding: 0px 20px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    &:after {
+      content: "🔍";
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top: 7px;
+      font-size: 26px;
+      cursor: text;
+      
+      @include tablet {
+        right: 30px;
+      }
+    }
+  }
+
+  &__search-input {
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 26px;
+    line-height: 2;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 15px;
+    transition: background-color 100ms;
+
+    &:focus {
+      background-color: $c-yellow;
+    }
+  }
+
+  &__search-description {
+    font-size: 16px;
+  }
+
+  &__results {
+    width: 100%;
+    margin-top: 50px;
+    color: $c-gray;
+  }
+
+  &__heading {
+    border-bottom: 1px solid $c-white;
+    background-color: transparent;
+    color: $c-white;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+  }
+
+  &__heading-item {
+    width: 80%;
+    display: block;
+    padding: 10px 20px;
+
+    &--district-number {
+      width: 20%;
+      text-align: center;
+      margin-right: 5px;
+    }
+  }
+  
+  &__items-wrapper {
+    width: 100%;
+    display: flex;
+    background-color: $c-yellow;
+    font-size: 26px;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-items: center;
+    border: 2px solid $c-yellow;
+  }
+
+  &__item {
+    width: 80%;
+    display: block;
+    padding: 10px 20px;
+
+    &--district-number {
+      width: 20%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      background-color: $c-gray;
+      color: $c-white;
+      border-radius: 5px;
+      margin: 5px;
+      border: 2px solid $c-white;
+    }
+  }
+}
