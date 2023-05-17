@@ -125,12 +125,12 @@ body {
   }
 
   &__heading-item {
-    width: 80%;
+    width: 60%;
     display: block;
     padding: 10px 20px;
 
     &--district-number {
-      width: 20%;
+      width: 40%;
       text-align: center;
       margin-right: 5px;
     }
@@ -148,12 +148,13 @@ body {
   }
 
   &__item {
-    width: 80%;
+    width: 60%;
     display: block;
     padding: 10px 20px;
 
     &--district-number {
-      width: 20%;
+      word-break: break-all;
+      width: 40%;
       text-align: center;
       font-weight: bold;
       font-size: 30px;
