@@ -116,23 +116,47 @@ body {
   text-align: center;
   margin-right: 5px;
 }
+@media (max-width: 768px) {
+  .districts__heading-item--district-number, .districts__heading-item--street {
+    display: none;
+  }
+}
+.districts__heading-item--both {
+  display: none;
+}
+@media (max-width: 768px) {
+  .districts__heading-item--both {
+    display: block;
+  }
+}
 .districts__items-wrapper {
   width: 100%;
   display: flex;
   background-color: #fec134;
   font-size: 26px;
+  font-weight: bold;
   margin-top: 10px;
   border-radius: 5px;
   align-items: center;
   border: 2px solid #fec134;
+}
+@media (max-width: 768px) {
+  .districts__items-wrapper {
+    flex-direction: column;
+  }
 }
 .districts__item {
   width: 60%;
   display: block;
   padding: 10px 20px;
 }
+@media (max-width: 768px) {
+  .districts__item {
+    width: 100%;
+    text-align: center;
+  }
+}
 .districts__item--district-number {
-  word-break: break-all;
   width: 40%;
   text-align: center;
   font-weight: bold;
@@ -142,4 +166,10 @@ body {
   border-radius: 5px;
   margin: 5px;
   border: 2px solid whitesmoke;
+}
+@media (max-width: 768px) {
+  .districts__item--district-number {
+    font-size: 24px;
+    width: 100%;
+  }
 }
